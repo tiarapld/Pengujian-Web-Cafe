@@ -11,10 +11,10 @@ Fitur yang diuji
 
 | test sace | Feature     | Input                          | Expected Output                 | Actual Output | Status |
 |----|-------------|--------------------------------|----------------------------------|---------------|--------|
-| BVA1  | Registration| Username 3 characters          | Accepted                        |               |        |
-| BVA2  | Registration| Username 2 characters          | Rejected with error message     |               |        |
-| BVA3  | Order       | Quantity = 1                   | Accepted                        |               |        |
-| BVA4  | Order       | Quantity = 0                   | Rejected                        |               |        |
+| BVA1  | Registration|           | Accepted                        |               |        |
+| BVA2  | Registration| Username        | Rejected with error message     |               |        |
+| BVA3  | Order       | Quantity                  | Accepted                        |               |        |
+| BVA4  | Order       | Quantity                   | Rejected                        |               |        |
 
 ---
 
