@@ -4,37 +4,59 @@
 
 ---
 
+## Parameter
+
+Fitur yang diuji: register, login, order
+
+| test sace | Parameter     | batas valid                          | batas invalid  |               
+|----|-------------|--------------------------------|----------------------------------|
+| BVA1  | Registrasi| 1 - 15 karakter      |  kosong/ > 15 karakter                    |           
+  | BVA2  | login| 1 -15  karakter     |   kosong/ >15 karakter   |               |
 
 
 ## 🧪 1. Boundary Value Analysis (BVA)
-Fitur yang diuji
 
-| test sace | Feature     | Input                          | Expected Output                 | Actual Output | Status |
+Fitur yang diuji: register, login
+## Register
+| No | Parameter     | nilai Input                          | Expected Output                 | Actual Output | Status |
 |----|-------------|--------------------------------|----------------------------------|---------------|--------|
-| BVA1  | Registration|           | Accepted                        |               |        |
-| BVA2  | Registration| Username        | Rejected with error message     |               |        |
-| BVA3  | Order       | Quantity                  | Accepted                        |               |        |
-| BVA4  | Order       | Quantity                   | Rejected                        |               |        |
-
+| BVA1 | username| "17"                     | error                        |    sukses           |    ❌    |
+| BVA2  | username       | "4"                  | sukses                 | sukses              |   ✅      |
+| BVA3  | email      | "20"            |    error      |  sukses             |    ❌    |
+| BVA4  | email      | "@gmail.com"            |    sukses      |  error             |    ❌    |
+| BVA5  | password      | "20"            |    sukses      |  sukses             |     ✅   |
+| BVA6  | konfirmasi password      | "tidak sesuai"            |    sukses      |  error            |   ❌      |
 ---
+## login
+| No | Parameter     | nilai Input                          | Expected Output                 | Actual Output | Status |
+|----|-------------|--------------------------------|----------------------------------|---------------|--------|
+| BVA1  | username|        "tidak sesuai yang diregister"             | error                        |    error           |     ✅   |
+| BVA2  | password|        "kosong"             |           error              |    error           |     ✅   |
+| BVA3  | password|        "5"             |           sukses              |    error           |    ❌    |
 
 ## 🧪 2. Equivalence Partitioning
 
-| No | Feature     | Input                          | Expected Output                 | Actual Output | Status |
+| No | Parameter     | Nilai Input                          | Expected Output                 | Actual Output | Status |
 |----|-------------|--------------------------------|----------------------------------|---------------|--------|
-| 1  | Registration| Valid email                    | Accepted                        |               |        |
-| 2  | Registration| Invalid email (e.g. no '@')    | Rejected with error             |               |        |
-| 3  | Order       | Valid menu ID                  | Order processed                 |               |        |
-| 4  | Order       | Invalid menu ID                | Error or item not found         |               |        |
+| 1  | username| "kosong"l                    |                 Please fill out this field          |          benar     |    ✅     |
+| 2  | username| "tidak sesuai"    | username atau password tidak valid            |      benar         |  ✅      |
+| 3  | password       |   "kosong"                | Please fill out this field               |     benar          |     ✅   |
+| 4  | password       | "kurang dari 6 karakter"                | username atau password tidak valid         |        benar       |   ✅     |
 
 ---
 
 ## 🧪 3. Decision Table Testing
 
-| No | Condition                              | Action             | Expected Output         | Actual Output | Status |
-|----|----------------------------------------|--------------------|--------------------------|---------------|--------|
-| 1  | User logged in + Menu available        | Place order        | Success confirmation     |               |        |
-| 2  | User not logged in + Menu available    | Place order        | Redirect to login        |               |        |
+| ID | CONDITION / ACTION                                       | TC1 | TC2 | TC3 | TC4 | TC5 |
+| -- | -------------------------------------------------------- | --- | --- | --- | --- | --- |
+| C1 | Username kosong                                          | T   | F   | F   | F   | F   |
+| C2 | Password kosong                                          | F   | T   | F   | F   | F   |
+| C3 | Password < 6 karakter                                    | F   | F   | T   | F   | F   |
+| C4 | Username dan password valid tapi tidak cocok di database | F   | F   | F   | T   | F   |
+| A1 | Tampilkan “Please fill out this field”                   | E   | E   |     |     |     |
+| A2 | Tampilkan “Username atau password tidak valid”           |     |     | E   | E   |     |
+| A3 | Login berhasil                                           |     |     |     |     | E   |
+
 
 ---
 
