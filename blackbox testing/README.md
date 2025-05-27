@@ -18,7 +18,7 @@ Fitur yang diuji: register, login, order
 
 Fitur yang diuji: register, login
 ## Register
-| No | Parameter     | nilai Input                          | Expected Output                 | Actual Output | Status |
+| No | Parameter     |  Input                          | Expected Output                 | Actual Output | Status |
 |----|-------------|--------------------------------|----------------------------------|---------------|--------|
 | BVA1 | username| "17"                     | error                        |    sukses           |    ❌    |
 | BVA2  | username       | "4"                  | sukses                 | sukses              |   ✅      |
@@ -28,7 +28,7 @@ Fitur yang diuji: register, login
 | BVA6  | konfirmasi password      | "tidak sesuai"            |    sukses      |  error            |   ❌      |
 ---
 ## login
-| No | Parameter     | nilai Input                          | Expected Output                 | Actual Output | Status |
+| No | Parameter     | Input                          | Expected Output                 | Actual Output | Status |
 |----|-------------|--------------------------------|----------------------------------|---------------|--------|
 | BVA1  | username|        "tidak sesuai yang diregister"             | error                        |    error           |     ✅   |
 | BVA2  | password|        "kosong"             |           error              |    error           |     ✅   |
@@ -36,7 +36,7 @@ Fitur yang diuji: register, login
 
 ## 🧪 2. Equivalence Partitioning
 
-| No | Parameter     | Nilai Input                          | Expected Output                 | Actual Output | Status |
+| No | Parameter     |  Input                          | Expected Output                 | Actual Output | Status |
 |----|-------------|--------------------------------|----------------------------------|---------------|--------|
 | 1  | username| "kosong"l                    |                 Please fill out this field          |          benar     |    ✅     |
 | 2  | username| "tidak sesuai"    | username atau password tidak valid            |      benar         |  ✅      |
