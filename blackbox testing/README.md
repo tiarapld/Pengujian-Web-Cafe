@@ -1,5 +1,5 @@
 
-#  Cafe App - Black Box Testing Report
+#  Website Cafe Aroma - Black Box Testing Report
 
 
 ---
@@ -9,12 +9,12 @@
 ## 🧪 1. Boundary Value Analysis (BVA)
 Fitur yang diuji
 
-| No | Feature     | Input                          | Expected Output                 | Actual Output | Status |
+| test sace | Feature     | Input                          | Expected Output                 | Actual Output | Status |
 |----|-------------|--------------------------------|----------------------------------|---------------|--------|
-| 1  | Registration| Username 3 characters          | Accepted                        |               |        |
-| 2  | Registration| Username 2 characters          | Rejected with error message     |               |        |
-| 3  | Order       | Quantity = 1                   | Accepted                        |               |        |
-| 4  | Order       | Quantity = 0                   | Rejected                        |               |        |
+| BVA1  | Registration| Username 3 characters          | Accepted                        |               |        |
+| BVA2  | Registration| Username 2 characters          | Rejected with error message     |               |        |
+| BVA3  | Order       | Quantity = 1                   | Accepted                        |               |        |
+| BVA4  | Order       | Quantity = 0                   | Rejected                        |               |        |
 
 ---
 
