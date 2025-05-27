@@ -4,10 +4,10 @@
 
 ---
 
-## 🔍 Fitur yang diuji
+
 
 ## 🧪 1. Boundary Value Analysis (BVA)
-##🔍 Fitur yang diuji
+Fitur yang diuji
 
 | No | Feature     | Input                          | Expected Output                 | Actual Output | Status |
 |----|-------------|--------------------------------|----------------------------------|---------------|--------|
