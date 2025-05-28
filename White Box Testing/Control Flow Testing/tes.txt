@@ -1,0 +1,10 @@
+Control Flow Testing - Basic Path Testing
+
+Tujuan:
+- Menguji semua jalur logika dalam program.
+- Menjamin bahwa tidak ada path yang terlewatkan dalam eksekusi.
+
+Langkah-langkah:
+1. Buat control flow graph.
+2. Identifikasi path independen.
+3. Buat dan jalankan test case untuk setiap path.
